@@ -1,0 +1,37 @@
+<div class="title dangnhap formDangnhap">
+  <h1>Login</h1>
+  <form #formDangnhap="ngForm" (ngSubmit)="Dangnhap(formDangnhap.value,formDangnhap)">
+
+    <div class="input-group ">
+      <div class="icon_input">
+        <i class="fa fa-user-circle-o"></i>
+      </div>
+      <input type="text" class="form-control" #taikhoan="ngModel" name="TaiKhoan" ngModel required
+        placeholder="User name">
+
+    </div>
+    <div *ngIf="taikhoan.errors  && (taikhoan.touched || taikhoan.dirty)">
+      <p *ngIf="taikhoan.errors.required" class="alert alert-danger"><i class="material-icons">error</i> Vui lòng nhập
+        tài khoản
+      
+        <i class="fa fa-sort-asc"></i></p>
+    </div>
+    <div class="input-group mt-2">
+      <div class="icon_input">
+        <i class="fa fa-lock"></i>
+      </div>
+      <input required type="password" class="form-control" name="MatKhau" #matkhau="ngModel" ngModel
+        placeholder="Password">
+
+    </div>
+    <div *ngIf="matkhau.errors  && (matkhau.touched || matkhau.dirty)">
+      <p *ngIf="matkhau.errors.required" class="alert alert-danger"><i class="material-icons">error</i>Vui lòng nhập mật
+        khẩu <i class="fa fa-sort-asc"></i></p>
+    </div>
+    <button class="btn btn-success mt-4" type="submit">Đăng Nhập</button>
+
+    <p id="newAccount"> To register new account <span>→</span> </p> 
+    
+  </form>
+
+</div>
