@@ -1,3 +1,52 @@
-<p>
-  quanlyphim works!
-</p>
+<div class="QuanLyPhim pt-4">
+  <div class="container QuanLyPhim_content">
+    <h1 style="text-align: center; margin-bottom: 50px;" class="mt-5"> <i class="fa fa-film mr-3"></i>Quản Lý Phim</h1>
+    <div class="row mx-0">
+      <div class="col-md-4 px-0">
+        <h4 style="margin-bottom: 0"><i class="fa fa-list-alt mr-3"></i>Danh Sách Phim</h4>
+      </div>
+      <div class="col-md-8 px-0 row">
+        <button class="btn btn-outline-success ml-auto">Thêm Phim</button>
+      </div>
+
+      <!-- <div class="table-responsive"> -->
+      <table class="table table-bordered mt-5 table-responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th>Hình Ảnh</th>
+            <th>Mã Phim</th>
+            <th>Tên Phim</th>
+            <th>Mô Tả</th>
+            <th>Mã Nhóm</th>
+            <th>Ngày Khởi Chiếu</th>
+            <th>Đánh Giá</th>
+            <th>Trạng Thái</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let QLPhim of DSQLPhim">
+            <td><img [src]="QLPhim.HinhAnh" alt="">
+            </td>
+            <td style="word-wrap: break-word">{{QLPhim.MaPhim}}
+            </td>
+            <td style="word-wrap: break-word">{{QLPhim.TenPhim}}
+            </td>
+            <td style="word-wrap: break-word">{{QLPhim.MoTa}}
+            </td>
+            <td style="word-wrap: break-word">{{QLPhim.MaNhom}}
+            </td>
+            <td style="word-wrap: break-word">{{QLPhim.NgayKhoiChieu}}
+            </td>
+            <td style="word-wrap: break-word">{{QLPhim.DanhGia}}
+            </td>
+            <td>
+              <button class="btn btn-info">Sửa Phim</button>
+              <button class="btn btn-danger">Xóa Phim</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

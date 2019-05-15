@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     
     path: '', component: LayoutHomeComponent, children: [
-      { path: '', component: TrangChiTietComponent },
+      { path: '', component: TrangChuComponent },
       { path: 'trangchu', component: TrangChuComponent },
       { path: 'trangchitiet/:id', component: TrangChiTietComponent },
     

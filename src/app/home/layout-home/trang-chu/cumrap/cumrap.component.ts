@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cumrap.component.scss']
 })
 export class CumrapComponent implements OnInit {
-
+  loairap = 'Cinestar';
   constructor() { }
-
+  ChonLoaiRap(val) {
+    this.loairap = val;
+  }
   ngOnInit() {
   }
 

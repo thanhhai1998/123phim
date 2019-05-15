@@ -22,27 +22,36 @@ import { MaterialModuleModule } from '../share/material/material.module';
 import { DangkydangnhapComponent } from './layout-home/dangkydangnhap/dangkydangnhap.component';
 import { DangkyComponent } from './layout-home/dangkydangnhap/dangky/dangky.component';
 import { DangnhapComponent } from './layout-home/dangkydangnhap/dangnhap/dangnhap.component';
+import {StatusDatveComponent} from './layout-home/trang-chu/status-datve/status-datve.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; 
+import {CinemaComponent} from './layout-home/trang-chu/cumrap/list-rap-phim/cinema/cinema.component';
+import {CinestarComponent} from './layout-home/trang-chu/cumrap/list-rap-phim/cinestar/cinestar.component';
 import { PipeModule } from '../pipe/pipe.module';
-
+import {ItemrapphimComponent} from './layout-home/trang-chu/cumrap/itemrapphim/itemrapphim.component';
 import { NgxLoadingModule } from 'ngx-loading';
+import {SuatchieuComponent} from './layout-home/trang-chu/cumrap/suatchieu/suatchieu.component';
+
+import { Dienanh24hComponent } from './layout-home/trang-chu/tintuc/dienanh24h/dienanh24h.component';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
  
+import { ReviewComponent } from './layout-home/trang-chu/tintuc/review/review.component';
+import { KhuyenmaiComponent } from './layout-home/trang-chu/tintuc/khuyenmai/khuyenmai.component';
+import { ListRapPhimComponent } from './layout-home/trang-chu/cumrap/list-rap-phim/list-rap-phim.component';
  
 @NgModule({
   // tslint:disable-next-line: max-line-length
   declarations: [
-    LayoutHomeComponent,
-    HeaderComponent,
+    LayoutHomeComponent,SuatchieuComponent,Dienanh24hComponent,ReviewComponent,ListRapPhimComponent,KhuyenmaiComponent,
+    HeaderComponent,ItemrapphimComponent,
     FooterComponent,
-    TrangChuComponent,
+    TrangChuComponent,CinemaComponent,CinestarComponent,
     TrangChiTietComponent,
     PhimComponent,
     SliderComponent,
     DangchieuComponent,
-    SapchieuComponent,
+    SapchieuComponent,StatusDatveComponent,
     CumrapComponent,
     TintucComponent,
     QuangcaoComponent,

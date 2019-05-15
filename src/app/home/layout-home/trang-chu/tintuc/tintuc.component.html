@@ -1,3 +1,22 @@
-<p>
-  tintuc works!
-</p>
+<div class="container TinTuc px-0">
+  <div class="row dieuHuong mx-0">
+    <div class="text-center col-md-12 dieuHuong_content mb-4">
+      <button class="btn btn-outline-success"  (click)="ChonLoaiTin('dienanh')">Điện Ảnh 24H</button>
+      <button class="btn btn-outline-success mx-3" (click)="ChonLoaiTin('review')">Review</button>
+      <button class="btn btn-outline-success" (click)="ChonLoaiTin('khuyenmai')">Khuyến Mãi</button>
+    </div>
+  </div>
+  <div class="TinTuc_Info" [ngSwitch]="LoaiTin">
+    <div class="col-md-12 info_content" *ngSwitchCase="'dienanh'">
+      <app-dienanh24h></app-dienanh24h>
+    </div>
+    <div class="col-md-12 info_content" *ngSwitchCase="'review'">
+      <app-review></app-review>
+    </div>
+    <div class="col-md-12 info_content" *ngSwitchCase="'khuyenmai'">
+      <app-khuyenmai></app-khuyenmai>
+    </div>
+
+  </div>
+
+</div>

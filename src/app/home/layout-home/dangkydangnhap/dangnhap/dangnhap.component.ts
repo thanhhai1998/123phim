@@ -19,19 +19,7 @@ export class DangnhapComponent implements OnInit {
         console.log(res);
         if (typeof (res) == "object") {
           localStorage.setItem('User', JSON.stringify(res));
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000
-          });
-          
-          Toast.fire({
-            type: 'success',
-            title: 'Đăng nhập  thành công !!',
-            background:'#ffff',
-            
-            })
+         
           this.evtLogin.emit(res.TaiKhoan);
         }
         else{

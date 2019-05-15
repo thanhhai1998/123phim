@@ -1,3 +1,117 @@
-<p>
-  cumrap works!
-</p>
+<div class="layout_cumrap container px-0">
+  <div class="layout_cumrap_img row">
+    <img style="margin: auto" src="../../../../../assets/image/img_cumrap/back-news.png" alt="">
+  </div>
+</div>
+<div class="container CumRap_session px-0">
+  <div class="Cumrap_content row mx-0">
+    <div class="Cumrap_item col-md-1 col-xs">
+      <ul class="nav nav-tabs">
+        <li>
+          <img src="../../../../../assets/image/img_cumrap/05db7612f4a6f0ee3db35b63528f3473.png" class="btn"
+            (click)="ChonLoaiRap('Cinema')">
+        </li>
+        <li>
+          <img src="../../../../../assets/image/img_cumrap/1721cfa98768f300c03792e25ceb0191.png" class="btn"
+            (click)="ChonLoaiRap('Cinestar')">
+        </li>
+        <li>
+          <a href="#"><img src="../../../../../assets/image/img_cumrap/404b8c4b80d77732e7426cdb7e24be20.png"></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../../../assets/image/img_cumrap/7b078639bd8fdb09dd83652d207c7b90.png"></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../../../assets/image/img_cumrap/9b240f96a233bb43203ee514a21a6004.png"></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../../../assets/image/img_cumrap/e520781386bd5436e94d6e15e193a005.png"></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../../../assets/image/img_cumrap/ee621ee05dcd4565caead4f29421b41e.png"></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../../../assets/image/img_cumrap/f32670fd0eb083c9c4c804f0f3a252ed.png"></a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="tenRap_content col-md-4 col-xs-1" [ngSwitch]="loairap">
+      <div class="Cinema" *ngSwitchCase="'Cinema'">
+        <app-cinema></app-cinema>
+      </div>
+      <div class="Cinestar" *ngSwitchCase="'Cinestar'">
+        <app-cinestar></app-cinestar>
+      </div>
+      <!-- <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-nguyen-du-15379626329832.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-trung-chanh-15381048160387.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-quang-trung-15381040745219.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-pham-van-chi-15381059548289.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-nguyen-van-qua-15381052937743.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-tan-binh-15381063333729.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-kinh-duong-vuong-15381065563489.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div>
+      <div class="tenRap_item row mx-0">
+        <img src="../../../../../assets/image/img_tenrap/galaxy-huynh-tan-phat-15381070102598.jpg" alt="">
+        <div class="info_rap col-md-9">
+          <span>GLX - Nguyễn Du</span><br>
+          <span>116 Nguyễn Du, Q.1</span><br>
+          <a href="#">[chi tiết]</a>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="lichchieu_content col-md-7">
+
+    </div>
+  </div>
+</div>

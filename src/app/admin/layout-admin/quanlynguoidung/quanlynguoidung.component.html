@@ -1,3 +1,46 @@
-<p>
-  quanlynguoidung works!
-</p>
+<div class="QuanLyPhim pt-4">
+    <div class="container QuanLyPhim_content">
+      <h1 style="text-align: center; margin-bottom: 50px;" class="mt-5"> <i class="fa fa-user-circle-o mr-2"></i>Quản Lý Người Dùng</h1>
+      <div class="row mx-0">
+        <div class="col-md-4 px-0">
+          <h4 style="margin-bottom: 0"><i class="fa fa-list-alt mr-3"></i>Danh Sách Người Dùng</h4>
+        </div>
+        <div class="col-md-8 px-0 row">
+          <button class="btn btn-outline-success ml-auto">Thêm Người Dùng Mới</button>
+        </div>
+  
+        <!-- <div class="table-responsive"> -->
+        <table class="table table-bordered mt-5 table-responsive">
+          <thead class="thead-dark">
+            <tr>
+              <th>Tài Khoản</th>
+              <th>Họ Tên</th>
+              <th>Mật Khẩu</th>
+              <th>Email</th>
+              <th>Số Điện Thoại</th>
+              <th>Mã Nhóm</th>
+              <th>Mã Loại Người Dùng</th>
+              <th>Trạng Thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let nguoidung of DSNguoiDung">
+                <td>{{nguoidung.TaiKhoan}}</td>
+                <td>{{nguoidung.HoTen}}</td>
+                <td>{{nguoidung.MatKhau}}</td>
+                <td>{{nguoidung.Email}}</td>
+                <td>{{nguoidung.SoDT}}</td>
+                <td>{{nguoidung.MaNhom}}</td>
+                <td>{{nguoidung.MaLoaiNguoiDung}}</td>
+                <td>
+                    <button class="btn btn-info">Sửa Người Dùng</button>
+                    <button class="btn btn-danger">Xóa Người Dùng</button>
+                </td>
+              
+            </tr>
+  
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

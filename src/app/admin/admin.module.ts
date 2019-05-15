@@ -5,13 +5,15 @@ import { QuanlynguoidungComponent } from './layout-admin/quanlynguoidung/quanlyn
 import { QuanlyphimComponent } from './layout-admin/quanlyphim/quanlyphim.component';
 import { QuanlylichchieuComponent } from './layout-admin/quanlylichchieu/quanlylichchieu.component';
 import { AdminRoutingModule } from './admin-routing.module';
+import { HeaderAdminComponent } from './layout-admin/header-admin/header-admin.component';
 
 @NgModule({
   declarations: [
     LayoutAdminComponent,
     QuanlynguoidungComponent,
     QuanlyphimComponent,
-    QuanlylichchieuComponent],
+    QuanlylichchieuComponent,
+    HeaderAdminComponent],
   imports: [
     CommonModule,
     AdminRoutingModule
@@ -20,7 +22,8 @@ import { AdminRoutingModule } from './admin-routing.module';
     LayoutAdminComponent,
     QuanlynguoidungComponent,
     QuanlyphimComponent,
-    QuanlylichchieuComponent
+    QuanlylichchieuComponent,
+    HeaderAdminComponent
   ]
 })
 export class AdminModule { }

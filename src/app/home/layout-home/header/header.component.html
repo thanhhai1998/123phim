@@ -1,3 +1,80 @@
-<div class="header" style="">
-    <a routerLink="/home/trangchitiet/14" class="myheader">asdasd</a>
+<div class="header">
+  <nav class="navbar navbar-expand-md  text-center justify-content-center row m-0" style="justify-content: space-between">
+    <!-- Brand -->
+    <a class="navbar-brand col-md-3 text-left "routerLink="/home">
+      <img src="../../../../assets/image/11.png" class="pl-3" alt="LoGo">
+    </a>
+   
+   
+    <!-- Links -->
+    <nav class="text-center m-auto row m-0 col-md-6" style="justify-content: space-between">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Lịch Chiếu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cụm Rạp</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tin Tức</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quảng Cáo</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <!-- Dropdown -->
+    <div class="navbar-nav  DangNhap col-md-3   mr-auto text-right  row" style="align-items: center;display: inline;
+    
+    ">
+        <li class="nav-item mr-3" style="display: inline;">
+          <div *ngIf="isLoginSuccess else notLogin" style="position: relative;display: inline;">
+  
+            <a style="cursor: pointer; color:#fb4226"  (click)="showMenuUser()" class="pr-3"><i
+                class="fa fa-user-circle mr-3 "></i>{{nameUser}}</a>
+            <div class="dropdown-menu show menuUser" *ngIf="isShowMenuUser">
+              <ul class="m-0">
+  
+                <li>
+                  <button style="" class="p-0" (click)="dangxuat()"> Đăng xuất <i class=" ml-2 fa fa-sign-out"></i></button>
+                </li>
+  
+              </ul>
+            </div>
+          </div>
+          <ng-template #notLogin>
+  
+            <a (click)="openFormLogin()" style="cursor: pointer;" class=" pr-3"><i class="fa fa-user-circle mr-3"></i>Đăng nhập</a>
+          </ng-template>
+        </li>  
+      <li class="dropdown" style="display: inline;">
+        <a class="nav-Link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          <i class="fa fa-map-marker pr-2"></i> Hồ Chí Minh
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Hồ Chí Minh</a>
+          <a class="dropdown-item" href="#">Hà Nội</a>
+          <a class="dropdown-item" href="#">Đà Nẵng</a>
+          <a class="dropdown-item" href="#">Nha Trang</a>
+          <a class="dropdown-item" href="#">Hải Phòng</a>
+          <a class="dropdown-item" href="#">Biên Hòa</a>
+          <a class="dropdown-item" href="#">Bình Dương</a>
+          <a class="dropdown-item" href="#">Phan Thiết</a>
+        </div>
+        <!-- <select class="dropdown-menu" size="5">
+          <option value="HCM"><a class="dropdown-item" href="#">Hồ Chí Minh</a></option>
+          <option value="HN"><a class="dropdown-item" href="#">Hà Nội</a></option>
+          <option value="DN"><a class="dropdown-item" href="#">Đà Nẵng</a></option>
+          <option value="NT"><a class="dropdown-item" href="#">Nha Trang</a></option>
+          <option value="HP"><a class="dropdown-item" href="#">Hải Phòng</a></option>
+          <option value="BH"><a class="dropdown-item" href="#">Biên Hòa</a></option>
+          <option value="BD"><a class="dropdown-item" href="#">Bình Dương</a></option>
+          <option value="PT"><a class="dropdown-item" href="#">Phan Thiết</a></option>
+        </select> -->
+      </li>
+    </div>
+  </nav>
+  <app-dangkydangnhap [isShowFormLogin]="showFormLogin" (evtCloseFormLogin)="closeLoginForm($event)"
+    (evtLoginSuccess)="getUserName($event)"></app-dangkydangnhap>
 </div>
